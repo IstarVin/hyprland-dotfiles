@@ -229,7 +229,7 @@ arch-chroot /mnt passwd -dl root
 echo -e "\n### Setting permissions on the custom repo"
 arch-chroot /mnt chown -R "$user:$user" "/var/cache/pacman/${user}-local/"
 
-if [ "${user}" = "maximbaz" ]; then
+if [ "${user}" = "aj" ]; then
     echo -e "\n### Cloning dotfiles"
     arch-chroot /mnt sudo -u $user bash -c 'git clone --recursive https://github.com/maximbaz/dotfiles.git ~/.dotfiles'
 
