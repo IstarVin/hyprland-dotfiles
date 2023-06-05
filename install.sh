@@ -163,7 +163,7 @@ echo -e "\n### Configuring custom repo"
 mkdir "/mnt/var/cache/pacman/${user}-local"
 march="$(uname -m)"
 
-if [[ "${user}" == "maximbaz" && "${hostname}" == "home-"* ]]; then
+if [[ "${user}" == "aj" && "${hostname}" == "home-"* ]]; then
     wget -m -nH -np -q --show-progress --progress=bar:force --reject='index.html*' --cut-dirs=3 -P "/mnt/var/cache/pacman/${user}-local" "https://pkgbuild.com/~maximbaz/repo/${march}"
     rename -- 'maximbaz.' "${user}-local." "/mnt/var/cache/pacman/${user}-local"/*
 else
